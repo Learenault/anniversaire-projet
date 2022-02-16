@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import {personnes} from './data';
+import React, {useState} from 'react';
+import Liste from './Liste';
 
 function App() {
+  const [anniv, setAnniv] = useState([]);
+
+  const update = ()=>{
+    console.log();
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Anniversaire">
+     <h1>{personnes.length} anniversaires aujourd'hui</h1> 
+     {
+       personnes.map(personne =>{
+         return(<Liste key={personne.nom} pers={personne} />)
+       })
+     }
+     <button onClick={update}>Effacer</button>
+     </div>
     </div>
   );
 }
