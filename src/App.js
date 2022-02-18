@@ -1,26 +1,21 @@
 import './App.css';
 import {personnes} from './data';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Liste from './Liste';
 
 function App() {
-  const [anniv, setAnniv] = useState([]);
-
-  const update = ()=>{
-    console.log();
-  }
   return (
-    <div className="App">
-      <div className="Anniversaire">
+    <main>
+      <section>
      <h1>{personnes.length} anniversaires aujourd'hui</h1> 
      {
        personnes.map(personne =>{
          return(<Liste key={personne.nom} pers={personne} />)
        })
      }
-     <button onClick={update}>Effacer</button>
-     </div>
-    </div>
+     <button>Effacer</button>
+     </section>
+    </main>
   );
 }
 

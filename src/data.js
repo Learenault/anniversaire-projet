@@ -5,18 +5,21 @@ import img3 from './img/img3.jpg'
 export const personnes = [{
     prenom:"Léa",
     nom:"Renault",
-    date_anniversaire: "05/02/1997",
+    mois_date:2,
+    annee_date:1987,
     photo:img3
 },
 {
     prenom:"Julia",
     nom:"Poulet",
-    date_anniversaire: "09/02/1995",
+    mois_date:2,
+    annee_date:1995,
     photo:img2
 },
 {
     prenom:"Yohan",
     nom:"Spodar",
-    date_anniversaire: "11/10/1998",
+    mois_date:2,
+    annee_date:1967,
     photo:img1
 }]

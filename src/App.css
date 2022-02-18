@@ -1,34 +1,36 @@
-.App{
+main{
   background-color: rgb(206, 38, 108);
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.Anniversaire {
+section{
   background-color: white;
-  padding: 15px;
-  height: 85vh;
-  width: 35%;
+  padding: 1.5rem 2rem;
+  width: 90vw;
   margin: auto;
+  max-width: 1170px;
   justify-content: center;
   border-radius: 5px;
   border: 1px outset rgba(20, 20, 20, 0.5);
   box-shadow: 1px 1px 5px rgb(14, 13, 13);
 }
+
 h1{
   font-size: 22px;
   text-align: left;
 }
 
+
 button{
   background-color: rgb(206, 38, 108);
   color:white;
   border: none;
-  width: 90%;
   margin: auto;
-  display: flex;
+  display: block;
+  width: 100%;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -36,20 +38,53 @@ button{
   padding : 10px 15px 10px 15px
 }
 
-.Liste{
-display: flex;
-margin-bottom: 25px;
+.personne{
+display: grid;
+grid-template-columns: auto 1fr;
+column-gap: 0.75rem;
+margin-bottom: 1.5rem;
+align-items: center;
 }
+
+.personne img{
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .informations{
   flex:4;
-  margin-left: 5px;
+  margin-left: 15px;
+
 }
 
 .prenom{
   font-weight: bold;
+  font-size: 22px;
 }
 
 .date{
   color: gray;
+  font-size: 18px;
 }
 
+
+@media screen and (max-width: 1000px)
+{
+  .Anniversaire {
+    height: 85vh;
+    width: 50%;
+  }
+  .informations{
+    flex: 3;
+  }
+}
+
+@media screen and (max-width: 700px)
+{
+  .Anniversaire {
+    height: 85vh;
+    width: 80%;
+  }
+}
